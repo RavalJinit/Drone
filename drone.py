@@ -74,8 +74,6 @@ while True:
     print(me.get_battery())
     me.send_rc_control(valus [0], valus[1], valus[2], valus[3])
 
-
-
     cv2.imshow("Image",img)
     cv2.waitKey(1)
 
