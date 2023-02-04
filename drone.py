@@ -28,7 +28,8 @@ print(me.get_battery())
 
 me.streamoff()
 me.streamon()
-
+print(me.get_temperature())
+# me.set_speed()
 def getKeyBordeInpute():
     lr, fb, ud, yv = 0, 0, 0, 0
     speed = 50
@@ -51,6 +52,11 @@ def getKeyBordeInpute():
     if kp.getKey("f"): me.flip_left()
     elif kp.getKey("g"): me.flip_right()
 
+    if kp.getKey("z"): me.flip_forward()
+    elif kp.getKey("c"): me.flip_back()
+
+    # if kp.getKey("x"): me.rotate_clockwise(-speed)
+    # elif kp.getKey("v"): me.rotate_counter_clockwise(speed)
 
     return [lr, fb, ud, yv]
 
